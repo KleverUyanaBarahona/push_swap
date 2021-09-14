@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:06:03 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/14 15:06:27 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/14 22:14:45 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = 0;
-		//split_argument = check_number_argv(argv[i]);
+		split_argument = check_number_argv(argv[i]);
 		//if (fill_stack(&stack_a, split_argument))
 		//	print_error();
 		while (split_argument[j])

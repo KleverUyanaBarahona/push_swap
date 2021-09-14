@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: klever <klever@student.42.fr>              +#+  +:+       +#+         #
+#    By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 15:07:20 by kbarahon          #+#    #+#              #
-#    Updated: 2021/09/14 14:10:06 by klever           ###   ########.fr        #
+#    Updated: 2021/09/14 20:44:44 by kbarahon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 GNL= gnl/get_next_line_bonus.c 
 NAME= push_swap.a
-SRC= $(GNL) #./srcs/error.c ./srcs/parse.c ./srcs/utils.c ./srcs/functions_swap.c ./srcs/functions_push.c ./srcs/functions_rotate.c ./srcs/case_swap.c ./srcs/case_swap_utils.c ./srcs/push_swap_case.c ./srcs/push_swap_case_utils.c ./srcs/sort.c ./srcs/push_case_hundred.c ./srcs/ft_atoi_check.c
+SRC= $(GNL) ./srcs/parse.c#./srcs/error.c  ./srcs/utils.c ./srcs/functions_swap.c ./srcs/functions_push.c ./srcs/functions_rotate.c ./srcs/case_swap.c ./srcs/case_swap_utils.c ./srcs/push_swap_case.c ./srcs/push_swap_case_utils.c ./srcs/sort.c ./srcs/push_case_hundred.c ./srcs/ft_atoi_check.c
 SRC+= 
 OBJ1=$(SRC:.c=.o)
 OBJ=$(OBJ1:.m=.o)

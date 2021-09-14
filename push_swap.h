@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/14 13:57:59 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/14 22:14:39 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,16 @@ typedef struct s_var
 	int		len_b;
 	int		flag;
 }				t_var;
+
+/*
+typedef struct t_pila
+{
+	void *conten;
+	struct t_pila *next;
+}		t_pila;
+*/
+
+char	**check_number_argv(char *argv);
+void	print_error(void);
 
 #endif
