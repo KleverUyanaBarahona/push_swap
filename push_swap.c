@@ -6,7 +6,7 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:06:03 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/14 14:53:51 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/14 15:06:27 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ int	main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = 0;
-        stack_a.
 		//split_argument = check_number_argv(argv[i]);
 		//if (fill_stack(&stack_a, split_argument))
 		//	print_error();
