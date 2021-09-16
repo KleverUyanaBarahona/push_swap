@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/16 02:24:13 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/16 21:22:04 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ typedef struct t_pila
 	struct t_pila *next;
 }		t_pila;
 */
-
+int		ft_cmp_p_n(char *str);
+char	*ft_isspace(char *str);
 char	**check_number_argv(char *argv);
 void	print_error(void);
 int		fill_stack (t_list	**stack_a, char **str);
