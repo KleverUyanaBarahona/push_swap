@@ -3,39 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/29 15:03:50 by kbarahon          #+#    #+#             */
-/*   Updated: 2019/12/30 19:39:40 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/18 19:59:04 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	ft_intlen(long nb)
+{
+	size_t	count;
+
+	count = 0;
+	if (nb == 0)
+	{
+		count++;
+		return (count);
+	}
+	if (nb < 0)
+	{
+		nb = nb * -1;
+		count++;
+	}
+	while (nb > 0)
+	{
+		nb = nb / 10;
+		count++;
+	}
+	return (count);
+}
+
 char	*ft_itoa(int n)
 {
-	int		tmp;
-	int		i;
-	int		mod;
-	char	*str;
+	char	*strnum;
+	size_t	len;
+	long	nb;
 
-	tmp = n;
-	i = 1;
-	mod = n < 0;
-	while (tmp /= 10)
-		i++;
-	if (!(str = malloc((i + 1 + mod) * sizeof(char))))
+	nb = n;
+	len = ft_intlen(nb);
+	strnum = (char *)malloc(sizeof(char) * len + 1);
+	if (!strnum)
 		return (NULL);
-	if (mod)
-		*str++ = '-';
-	str += i;
-	*str-- = '\0';
+	strnum[len--] = '\0';
 	if (n == 0)
-		*str-- = '0';
-	while (n)
+		strnum[0] = '0';
+	if (nb < 0)
 	{
-		*str-- = (n % 10) * (mod ? -1 : 1) + '0';
-		n /= 10;
+		strnum[0] = '-';
+		nb = nb * -1;
 	}
-	return (str + 1 - mod);
+	while (nb > 0)
+	{
+		strnum[len] = (nb % 10) + '0';
+		nb = nb / 10;
+		len--;
+	}
+	return (strnum);
 }

@@ -3,14 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 20:42:17 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/16 02:26:01 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/18 19:14:33 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+int	dup_number(t_list *stack, int number)
+{
+	while (stack)
+	{
+		if (stack->content == number)
+			return (1);
+		stack = stack->next;
+	}
+	return (0);
+}
 
 static	int	is_neg_pos(int c)
 {
@@ -19,7 +30,7 @@ static	int	is_neg_pos(int c)
 	return (0);
 }
 
-int	fill_stack (t_list	**stack_a, char **str)
+int	fill_stack(t_list	**stack_a, char **str)
 {
 	int	i;
 	int	content;
@@ -32,14 +43,14 @@ int	fill_stack (t_list	**stack_a, char **str)
 		if (is_neg_pos(str[i][ft_strlen(str[i]) - 1]))
 			print_error();
 		content = ft_atoi_check(&str[i][0]);
-		//if (dup_number(*stack_a, content))
-		//{
-		//	while (*stack_a)
-		//		del_first_node(stack_a);
-		//	print_error();
-		//}
-		//else
-		//	ft_lstadd_back(stack_a, ft_lstnew(content));
+		if (dup_number(*stack_a, content))
+		{
+			while (*stack_a)
+				del_first_node(stack_a);
+			print_error();
+		}
+		else
+			ft_lstadd_back(stack_a, ft_lstnew(content));
 		i++;
 	}
 	return (0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 14:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2019/12/30 19:06:14 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/18 20:06:58 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*ft_strchr(const char *s, int c)
 			return (0);
 		s++;
 	}
-	return ((char*)s);
+	return ((char *)s);
 }

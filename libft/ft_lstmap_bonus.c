@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/02 21:23:29 by kbarahon          #+#    #+#             */
-/*   Updated: 2020/01/02 21:41:20 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/19 00:46:23 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*mapped;
-	t_list	*tmp;
+	t_list	*list_n;
+	t_list	*ele_n;
 
-	if (lst == NULL || f == NULL)
+	if (!f || !lst)
 		return (NULL);
-	mapped = NULL;
-	while (lst != NULL)
+	list_n = NULL;
+	while (lst)
 	{
-		if ((tmp = ft_lstnew((*f)(lst->content))) == NULL)
+		ele_n = ft_lstnew(f(lst->content));
+		if (!ele_n)
 		{
-			ft_lstclear(&mapped, del);
-			return (NULL);
+			ft_lstclear(&list_n, del);
 		}
-		ft_lstadd_back(&mapped, tmp);
+		ft_lstadd_back(&list_n, ele_n);
 		lst = lst->next;
 	}
-	return (mapped);
+	return (list_n);
 }

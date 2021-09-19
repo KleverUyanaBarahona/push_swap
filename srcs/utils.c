@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/27 22:44:09 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/18 20:06:38 by klever           ###   ########.fr       */
+/*   Created: 2021/09/18 18:56:16 by klever            #+#    #+#             */
+/*   Updated: 2021/09/18 19:04:22 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-char	*ft_strdup(const char *s1)
+void	del_first_node(t_list **stack)
 {
-	size_t	len;
-	void	*snew;
+	t_list	*aux;
 
-	len = ft_strlen((char *)s1) + 1;
-	snew = (char *)malloc(len);
-	if (snew == NULL)
-		return (NULL);
-	snew = ft_memcpy(snew, s1, len);
-	return ((char *)snew);
+	aux = *stack;
+	*stack = (*stack)->next;
+	free(aux);
 }

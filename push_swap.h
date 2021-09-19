@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/16 21:22:04 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/18 18:57:28 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,12 @@ typedef struct t_pila
 */
 int		ft_cmp_p_n(char *str);
 char	*ft_isspace(char *str);
+
+void	del_first_node(t_list **stack);
+int		dup_number(t_list *stack, int number);
 char	**check_number_argv(char *argv);
 void	print_error(void);
-int		fill_stack (t_list	**stack_a, char **str);
+int		fill_stack(t_list	**stack_a, char **str);
 int		ft_atoi_check(const char *str);
 
 #endif
