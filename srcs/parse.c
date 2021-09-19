@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 20:42:17 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/18 19:14:33 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/19 19:30:44 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	dup_number(t_list *stack, int number)
+int	dup_number(t_list_n *stack, int number)
 {
 	while (stack)
 	{
@@ -30,7 +30,7 @@ static	int	is_neg_pos(int c)
 	return (0);
 }
 
-int	fill_stack(t_list	**stack_a, char **str)
+int	fill_stack(t_list_n	**stack_a, char **str)
 {
 	int	i;
 	int	content;
@@ -50,7 +50,7 @@ int	fill_stack(t_list	**stack_a, char **str)
 			print_error();
 		}
 		else
-			ft_lstadd_back(stack_a, ft_lstnew(content));
+			ft_lstadd_back_int(stack_a, ft_lstnew_int(content));
 		i++;
 	}
 	return (0);

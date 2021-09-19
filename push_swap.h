@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/18 18:57:28 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/19 21:06:25 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,24 @@ typedef struct s_var
 	int		flag;
 }				t_var;
 
-/*
-typedef struct t_pila
+typedef struct s_list_n
 {
-	void *conten;
-	struct t_pila *next;
-}		t_pila;
-*/
-int		ft_cmp_p_n(char *str);
-char	*ft_isspace(char *str);
+	int				content;
+	struct s_list_n	*next;
+}				t_list_n;
 
-void	del_first_node(t_list **stack);
-int		dup_number(t_list *stack, int number);
-char	**check_number_argv(char *argv);
-void	print_error(void);
-int		fill_stack(t_list	**stack_a, char **str);
-int		ft_atoi_check(const char *str);
+void		ft_lstadd_back_int(t_list_n **lst, t_list_n *new);
+t_list_n	*ft_lstnew_int(int content);
+int			ft_cmp_p_n(char *str);
+char		*ft_isspace(char *str);
+int			ft_lstsize_int(t_list_n *lst);
+
+int			check_a(t_list_n *stack, int len);
+void		del_first_node(t_list_n **stack);
+int			dup_number(t_list_n *stack, int number);
+char		**check_number_argv(char *argv);
+void		print_error(void);
+int			fill_stack(t_list_n	**stack_a, char **str);
+int			ft_atoi_check(const char *str);
 
 #endif

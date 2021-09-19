@@ -6,19 +6,19 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:06:03 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/16 00:17:44 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/19 21:58:18 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*
-static void	push_swap(t_list **stack_a, t_list **stack_b)
+
+static void	push_swap(t_list_n **stack_a, t_list_n **stack_b)
 {
 	int	len;
 	int	*s_array;
 
 	s_array = NULL;
-	len = ft_lstsize(*stack_a);
+	len = ft_lstsize_int(*stack_a);
 	if (!check_a(*stack_a, len))
 	{	
 		if (len == 2)
@@ -38,12 +38,11 @@ static void	push_swap(t_list **stack_a, t_list **stack_b)
 		}
 	}
 }
-*/
 
 int	main(int argc, char *argv[])
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
+	t_list_n	*stack_a;
+	t_list_n	*stack_b;
 	char	**split_argument;
 	int		i;
 	int		j;
@@ -62,7 +61,7 @@ int	main(int argc, char *argv[])
 		free(split_argument);
 		i++;
 	}
-	//if (argc > 1)
-		//push_swap(&stack_a, &stack_b);
+	if (argc > 1)
+		push_swap(&stack_a, &stack_b);
 	return (0);
 }
