@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:06:03 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/19 21:58:18 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/20 19:55:23 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static void	push_swap(t_list_n **stack_a, t_list_n **stack_b)
 				swap_stack(*stack_a, 'a');
 		if (len == 3)
 			push_swap_case_three(stack_a);
+			/*
 		else if (len == 5)
 			push_swap_case_five(stack_a, stack_b);
 		else if (len > 5 || len == 4)
@@ -35,7 +36,8 @@ static void	push_swap(t_list_n **stack_a, t_list_n **stack_b)
 			push_hundred(stack_a, stack_b, len, s_array);
 			push_stack_a(stack_a, stack_b);
 			free(s_array);
-		}
+			
+		}*/
 	}
 }
 
@@ -43,9 +45,9 @@ int	main(int argc, char *argv[])
 {
 	t_list_n	*stack_a;
 	t_list_n	*stack_b;
-	char	**split_argument;
-	int		i;
-	int		j;
+	char		**split_argument;
+	int			i;
+	int			j;
 
 	i = 1;
 	j = 0;
