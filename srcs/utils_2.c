@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 21:03:40 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/19 21:05:07 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/20 20:27:58 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	ft_putstr(char *str)
+{
+	ft_putstr_fd(str, 1);
+}
 
 int	check_a(t_list_n *stack, int len)
 {
