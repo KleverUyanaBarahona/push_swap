@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/20 20:54:03 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/21 05:17:21 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,25 @@ typedef struct s_list_n
 	struct s_list_n	*next;
 }				t_list_n;
 /*utils*/
+void		ft_del_lstlast_int(t_list_n *lst);
 void		ft_putstr(char *str);
 void		ft_lstadd_back_int(t_list_n **lst, t_list_n *new);
+void		ft_lstadd_front_int(t_list_n **alst, t_list_n *new);
 t_list_n	*ft_lstnew_int(int content);
 int			ft_cmp_p_n(char *str);
 char		*ft_isspace(char *str);
 int			ft_lstsize_int(t_list_n *lst);
 t_list_n	*ft_lstlast_int(t_list_n *lst);
 /*push_swap*/
+int			get_pos_stack(t_list_n *stack_a, int content_b);
+void		push(t_list_n **stack, t_list_n **stack_dest, char c);
+void		case_zero(t_list_n **stack_a, t_list_n **stack_b);
+void		case_one(t_list_n **stack_a, t_list_n **stack_b);
+void		case_two(t_list_n **stack_a, t_list_n **stack_b);
+void		case_three(t_list_n **stack_a, t_list_n **stack_b);
+void		case_four(t_list_n **stack_a, t_list_n **stack_b);
+void		*case_swap(void);
+void		push_swap_case_five(t_list_n **stack_a, t_list_n **stack_b);
 void		reverse_rotate(t_list_n **stack, char c);
 void		rotate(t_list_n **stack, char c);
 void		push_swap_case_three(t_list_n **stack_a);

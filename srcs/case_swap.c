@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   function_swap.c                                    :+:      :+:    :+:   */
+/*   case_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 17:23:43 by klever            #+#    #+#             */
-/*   Updated: 2021/09/21 00:04:29 by kbarahon         ###   ########.fr       */
+/*   Created: 2021/09/21 05:06:02 by kbarahon          #+#    #+#             */
+/*   Updated: 2021/09/21 05:41:25 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_swap(int *content_a, int *content_b, char c)
+void	*case_swap(void)
 {
-	int	content;
+	void	(**ptr_func)(t_list_n **, t_list_n **);
 
-	content = *content_a;
-	*content_a = *content_b;
-	*content_b = content;
-	if (c == 'a')
-		ft_putstr("sa\n");
-	else if (c == 'b')
-		ft_putstr("sb\n");
-	else if (c == 'x')
-		ft_putstr("ss\n");
-}
-
-void	swap_stack(t_list_n *stack, char c)
-{
-	if (stack->next)
-	{
-		ft_swap(&stack->content, &stack->next->content, c);
-	}
+	ptr_func = malloc(sizeof(*ptr_func) * 5);
+	ptr_func[0] = &case_zero;
+	ptr_func[1] = &case_one;
+	ptr_func[2] = &case_two;
+	ptr_func[3] = &case_three;
+	ptr_func[4] = &case_four;
+	return (ptr_func);
 }

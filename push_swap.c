@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:06:03 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/20 19:55:23 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/21 05:17:29 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ static void	push_swap(t_list_n **stack_a, t_list_n **stack_b)
 				swap_stack(*stack_a, 'a');
 		if (len == 3)
 			push_swap_case_three(stack_a);
-			/*
 		else if (len == 5)
 			push_swap_case_five(stack_a, stack_b);
+			/*
 		else if (len > 5 || len == 4)
 		{
 			s_array = fill_array_int(*stack_a);

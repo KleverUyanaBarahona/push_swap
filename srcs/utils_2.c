@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 21:03:40 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/20 20:27:58 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/21 05:17:05 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,28 @@
 void	ft_putstr(char *str)
 {
 	ft_putstr_fd(str, 1);
+}
+
+void	ft_lstadd_front_int(t_list_n **alst, t_list_n *new)
+{
+	if (alst == NULL || new == NULL)
+		return ;
+	new->next = *alst;
+	*alst = new;
+}
+
+int	get_pos_stack(t_list_n *stack_a, int content_b)
+{
+	int	pos;
+
+	pos = 0;
+	while (stack_a)
+	{
+		if (stack_a->content < content_b)
+			pos++;
+		stack_a = stack_a->next;
+	}
+	return (pos);
 }
 
 int	check_a(t_list_n *stack, int len)

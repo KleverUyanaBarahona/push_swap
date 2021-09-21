@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   functions_rotate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 19:50:25 by klever            #+#    #+#             */
-/*   Updated: 2021/09/20 20:54:26 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/21 04:25:14 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,11 @@ void	reverse_rotate(t_list_n **stack, char c)
 	while (aux->next->next != NULL)
 		aux = aux->next;
 	ft_lstadd_front_int(stack, ft_lstnew_int(aux->next->content));
+	ft_del_lstlast_int(*stack);
 	free(aux->next);
 	aux->next = NULL;
 	if (c == 'a')
-		printf("rra\n");
+		ft_putstr("rra\n");
 	if (c == 'b')
-		printf("rrb\n");
+		ft_putstr("rrb\n");
 }
