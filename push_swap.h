@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/22 06:03:58 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/22 20:37:55 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char		*ft_isspace(char *str);
 int			ft_lstsize_int(t_list_n *lst);
 t_list_n	*ft_lstlast_int(t_list_n *lst);
 /*push_swap*/
+void		push_hundred(t_list_n **stk_a, t_list_n **stk_b,
+				int len, int *s_array);
 void		ft_sort_array(int *tab, int size);
 int			*fill_array_int(t_list_n *stack);
 int			get_pos_stack(t_list_n *stack_a, int content_b);
