@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:06:03 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/21 05:17:29 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/22 06:17:38 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,17 @@ static void	push_swap(t_list_n **stack_a, t_list_n **stack_b)
 			push_swap_case_three(stack_a);
 		else if (len == 5)
 			push_swap_case_five(stack_a, stack_b);
-			/*
-		else if (len > 5 || len == 4)
+		else if (len == 4)
+			push_swap_case_four(stack_a, stack_b);			
+		else if (len > 5)
 		{
 			s_array = fill_array_int(*stack_a);
-			ft_sort_array(s_array, ft_lstsize(*stack_a));
-			push_hundred(stack_a, stack_b, len, s_array);
-			push_stack_a(stack_a, stack_b);
+			//ft_sort_array(s_array, ft_lstsize_int(*stack_a));
+			//push_hundred(stack_a, stack_b, len, s_array);
+			//push_stack_a(stack_a, stack_b);
 			free(s_array);
 			
-		}*/
+		}
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 05:10:37 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/21 05:12:08 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/22 05:21:33 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,4 @@ void	push(t_list_n **stack, t_list_n **stack_dest, char c)
 		ft_putstr("pb\n");
 	else if (c == 'b')
 		ft_putstr("pa\n");
-}
+} 

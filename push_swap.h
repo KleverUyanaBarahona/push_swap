@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/21 05:17:21 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/22 06:03:58 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char		*ft_isspace(char *str);
 int			ft_lstsize_int(t_list_n *lst);
 t_list_n	*ft_lstlast_int(t_list_n *lst);
 /*push_swap*/
+void		ft_sort_array(int *tab, int size);
+int			*fill_array_int(t_list_n *stack);
 int			get_pos_stack(t_list_n *stack_a, int content_b);
 void		push(t_list_n **stack, t_list_n **stack_dest, char c);
 void		case_zero(t_list_n **stack_a, t_list_n **stack_b);
@@ -59,10 +61,11 @@ void		case_two(t_list_n **stack_a, t_list_n **stack_b);
 void		case_three(t_list_n **stack_a, t_list_n **stack_b);
 void		case_four(t_list_n **stack_a, t_list_n **stack_b);
 void		*case_swap(void);
+void		push_swap_case_four(t_list_n **stack_a, t_list_n **stack_b);
+void		push_swap_case_three(t_list_n **stack_a);
 void		push_swap_case_five(t_list_n **stack_a, t_list_n **stack_b);
 void		reverse_rotate(t_list_n **stack, char c);
 void		rotate(t_list_n **stack, char c);
-void		push_swap_case_three(t_list_n **stack_a);
 void		ft_swap(int *content_a, int *content_b, char c);
 void		swap_stack(t_list_n *stack, char c);
 int			check_a(t_list_n *stack, int len);
