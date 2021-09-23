@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:23:43 by klever            #+#    #+#             */
-/*   Updated: 2021/09/22 05:21:35 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/23 03:50:33 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,10 @@ void	swap_stack(t_list_n *stack, char c)
 	{
 		ft_swap(&stack->content, &stack->next->content, c);
 	}
+}
+
+void	swap_ss (t_list_n *stack_a, t_list_n *stack_b)
+{
+	ft_swap(&stack_a->content, &stack_a->next->content, 'x');
+	ft_swap(&stack_b->content, &stack_b->next->content, ' ');
 }

@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 19:50:25 by klever            #+#    #+#             */
-/*   Updated: 2021/09/22 05:21:31 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/23 04:07:12 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,18 @@ void	reverse_rotate(t_list_n **stack, char c)
 		ft_putstr("rra\n");
 	if (c == 'b')
 		ft_putstr("rrb\n");
+}
+
+void	rotate_rr(t_list_n **stack_a, t_list_n **stack_b)
+{
+	rotate(stack_a, 'r');
+	rotate(stack_b, 'r');
+	ft_putstr("rr\n");
+}
+
+void	reverse_rotate_rr(t_list_n **stack_a, t_list_n **stack_b)
+{
+	reverse_rotate(stack_a, 'r');
+	reverse_rotate(stack_b, 'r');
+	printf("rrr\n");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/22 20:37:55 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/23 03:57:11 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,12 @@ char		*ft_isspace(char *str);
 int			ft_lstsize_int(t_list_n *lst);
 t_list_n	*ft_lstlast_int(t_list_n *lst);
 /*push_swap*/
+int			get_iterative(int hold, int len_stack);
+int			get_max_content(t_list_n *stack);
+void		iter_push(t_list_n **stack_a, t_list_n **stack_b, t_var *var, int *s_array);
+void		push_stack_a(t_list_n **stack_a, t_list_n **stack_b);
+void		swap_ss(t_list_n *stack_a, t_list_n *stack_b);
+void		rotate_rr(t_list_n **stack_a, t_list_n **stack_b);
 void		push_hundred(t_list_n **stk_a, t_list_n **stk_b,
 				int len, int *s_array);
 void		ft_sort_array(int *tab, int size);
