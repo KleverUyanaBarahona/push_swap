@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_case_utils.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 03:43:35 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/23 03:51:47 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 19:18:42 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,29 +42,29 @@ int	get_max_content(t_list_n *stack)
 	return (pos);
 }
 
-void	iter_push(t_list_n **stack_a, t_list_n **stack_b, t_var *var, int *s_array)
+void	iter_push(t_list_n **stk_a, t_list_n **stk_b, t_var *var, int *s_array)
 {
 	while (var->iter > 0)
 	{
 		if (var->len_stack > 1)
 		{
-			if (var->len_b >= 2 && (*stack_b)->content
+			if (var->len_b >= 2 && (*stk_b)->content
 				== s_array[var->len_b - 2 ] && var->flag == 0)
 			{
-				push(stack_b, stack_a, 'b');
+				push(stk_b, stk_a, 'b');
 				var->iter = 0;
 				var->flag = 1;
 			}
 			else if (var->hold > (var->len_stack / 2))
-				reverse_rotate(stack_b, 'b');
+				reverse_rotate(stk_b, 'b');
 			else
-				rotate(stack_b, 'b');
+				rotate(stk_b, 'b');
 		}
 		var->iter--;
 	}
 	if (var->iter == 0)
 	{
-		push(stack_b, stack_a, 'b');
+		push(stk_b, stk_a, 'b');
 		var->flag = 0;
 	}
 	free(s_array);

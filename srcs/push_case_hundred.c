@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_case_hundred.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 20:31:37 by klever            #+#    #+#             */
-/*   Updated: 2021/09/24 01:03:46 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 19:17:44 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	len_block(int len)
 	return (0);
 }
 
-void	push_min(t_list_n **stack_a, t_list_n **stack_b, int *sort_array_b, int ref)
+void	push_min(t_list_n **stk_a, t_list_n **stk_b, int *sort_array_b, int ref)
 {
 	int	len;
 	int	block;
@@ -33,8 +33,8 @@ void	push_min(t_list_n **stack_a, t_list_n **stack_b, int *sort_array_b, int ref
 
 	pivote_a = sort_array_b[ref];
 	block = 0;
-	push(stack_a, stack_b, 'a');
-	len = ft_lstsize_int(*stack_a) + ft_lstsize_int(*stack_b);
+	push(stk_a, stk_b, 'a');
+	len = ft_lstsize_int(*stk_a) + ft_lstsize_int(*stk_b);
 	if (len >= 500)
 		block = 25;
 	else if (len >= 100 && len < 500)
@@ -43,13 +43,13 @@ void	push_min(t_list_n **stack_a, t_list_n **stack_b, int *sort_array_b, int ref
 		block = 2;
 	else if (len > 5)
 		block = 3;
-	if (ft_lstsize_int(*stack_b) >= 2 && (*stack_b)->content
-		< sort_array_b[ref - block] && ft_lstsize_int(*stack_a) >= 2
-		&& (*stack_a)->content > pivote_a)
-		rotate_rr(stack_a, stack_b);
-	if (ft_lstsize_int(*stack_b) >= 2 && (*stack_b)->content
+	if (ft_lstsize_int(*stk_b) >= 2 && (*stk_b)->content
+		< sort_array_b[ref - block] && ft_lstsize_int(*stk_a) >= 2
+		&& (*stk_a)->content > pivote_a)
+		rotate_rr(stk_a, stk_b);
+	if (ft_lstsize_int(*stk_b) >= 2 && (*stk_b)->content
 		< sort_array_b[ref - block])
-		rotate(stack_b, 'b');
+		rotate(stk_b, 'b');
 }
 
 void	rotate_max(t_list_n **stack_a, t_list_n **stack_b,

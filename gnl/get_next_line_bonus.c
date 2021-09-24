@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 11:24:45 by kbarahon          #+#    #+#             */
-/*   Updated: 2020/07/08 08:54:10 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 19:05:13 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	get_out(char **line, int fd, int l_read, char **s)
 		return (get_line(line, &s[fd]));
 }
 
-int			get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	int			l_read;
 	char		buff[BUFFER_SIZE + 1];
@@ -59,7 +59,8 @@ int			get_next_line(int fd, char **line)
 
 	if (fd < 0 || !line || BUFFER_SIZE < 1 || read(fd, buff, 0) < 0)
 		return (-1);
-	while ((l_read = read(fd, buff, BUFFER_SIZE)) > 0)
+	l_read = read(fd, buff, BUFFER_SIZE);
+	while (l_read)
 	{
 		buff[l_read] = '\0';
 		if (s[fd] == NULL)

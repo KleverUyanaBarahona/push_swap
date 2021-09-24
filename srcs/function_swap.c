@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   function_swap.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:23:43 by klever            #+#    #+#             */
-/*   Updated: 2021/09/23 03:50:33 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 19:14:17 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	swap_stack(t_list_n *stack, char c)
 	}
 }
 
-void	swap_ss (t_list_n *stack_a, t_list_n *stack_b)
+void	swap_ss(t_list_n *stack_a, t_list_n *stack_b)
 {
 	ft_swap(&stack_a->content, &stack_a->next->content, 'x');
 	ft_swap(&stack_b->content, &stack_b->next->content, ' ');

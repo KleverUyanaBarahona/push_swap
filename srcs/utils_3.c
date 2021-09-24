@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   utils_3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 22:14:10 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/24 19:26:06 by klever           ###   ########.fr       */
+/*   Created: 2021/09/24 19:40:11 by klever            #+#    #+#             */
+/*   Updated: 2021/09/24 19:41:55 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-char	*ft_isspace(char *str)
+void	del_first_node(t_list_n **stack)
 {
-	int	i;
+	t_list_n	*aux;
 
-	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	return (&str[i]);
+	aux = *stack;
+	*stack = (*stack)->next;
+	free(aux);
 }
 
-void	ft_putstr(char *str)
+void	ft_del_lstlast_int(t_list_n *lst)
 {
-	ft_putstr_fd(str, 1);
-}
+	t_list_n	*aux;
 
-void	print_error(void)
-{
-	ft_putstr("Error\n");
-	exit(0);
+	if (!lst)
+		return ;
+	if (ft_lstsize_int(lst) > 2)
+	{	
+		aux = lst;
+		while (((aux)->next)->next != NULL)
+			aux = aux->next;
+		free(aux->next);
+		aux->next = NULL;
+	}
+	else if (ft_lstsize_int(lst) == 2)
+		lst->next = NULL;
+	else if (ft_lstsize_int(lst) == 1)
+		lst = NULL;
 }

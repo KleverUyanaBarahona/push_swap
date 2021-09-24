@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 11:24:29 by kbarahon          #+#    #+#             */
-/*   Updated: 2020/07/08 09:08:04 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 19:02:56 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t		ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t		ft_strlen(const char *s)
 	return (i);
 }
 
-char		*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*str1;
 	char	*str2;
@@ -30,7 +30,7 @@ char		*ft_strdup(const char *s1)
 
 	i = 0;
 	str1 = (char *)s1;
-	str2 = (char*)malloc(ft_strlen(str1) + 1);
+	str2 = (char *)malloc(ft_strlen(str1) + 1);
 	if (str2 == NULL)
 		return (NULL);
 	while (str1[i] != '\0')
@@ -42,7 +42,7 @@ char		*ft_strdup(const char *s1)
 	return (str2);
 }
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str3;
 	int		i;
@@ -51,7 +51,8 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	if (!(str3 = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+	str3 = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!str3)
 		return (NULL);
 	while (s1[i] != '\0')
 	{
@@ -69,11 +70,11 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	return (str3);
 }
 
-char		*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
 
-	str = (char*)s;
+	str = (char *)s;
 	while (*str)
 	{
 		if (*str == c)
@@ -85,7 +86,7 @@ char		*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char		*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	char	*sub;
@@ -95,7 +96,8 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (str == NULL)
 		return (NULL);
-	if (!(sub = (char *)malloc(len + 1)))
+	(sub = (char *)malloc(len + 1));
+	if (!sub)
 		return (NULL);
 	if (start < ft_strlen(s))
 	{

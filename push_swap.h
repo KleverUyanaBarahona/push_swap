@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/23 03:57:11 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 18:50:51 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ t_list_n	*ft_lstlast_int(t_list_n *lst);
 /*push_swap*/
 int			get_iterative(int hold, int len_stack);
 int			get_max_content(t_list_n *stack);
-void		iter_push(t_list_n **stack_a, t_list_n **stack_b, t_var *var, int *s_array);
+void		iter_push(t_list_n **stack_a, t_list_n **stack_b,
+				t_var *var, int *s_array);
 void		push_stack_a(t_list_n **stack_a, t_list_n **stack_b);
 void		swap_ss(t_list_n *stack_a, t_list_n *stack_b);
 void		rotate_rr(t_list_n **stack_a, t_list_n **stack_b);

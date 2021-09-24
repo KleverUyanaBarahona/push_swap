@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 21:03:40 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/21 05:17:05 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 19:41:59 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-void	ft_putstr(char *str)
-{
-	ft_putstr_fd(str, 1);
-}
 
 void	ft_lstadd_front_int(t_list_n **alst, t_list_n *new)
 {
@@ -55,16 +50,6 @@ int	check_a(t_list_n *stack, int len)
 		return (1);
 	else
 		return (0);
-}
-
-char	*ft_isspace(char *str)
-{
-	int	i;
-
-	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	return (&str[i]);
 }
 
 int	ft_cmp_p_n(char *str)
