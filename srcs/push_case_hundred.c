@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 20:31:37 by klever            #+#    #+#             */
-/*   Updated: 2021/09/23 06:28:29 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 01:03:46 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,8 @@ void	push_hundred(t_list_n **stk_a, t_list_n **stk_b, int len, int *s_array)
 		{
 			if (pivote_a > (*stk_a)->content || i == len)
 				push_min(stk_a, stk_b, s_array, i);
-			//else
-				//rotate_max(stk_a, stk_b, s_array, i);
+			else
+				rotate_max(stk_a, stk_b, s_array, i);
 		}
 		i += block_inc;
 		if (i < len)

@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:06:03 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/23 03:56:36 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/24 03:39:54 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	push_swap(t_list_n **stack_a, t_list_n **stack_b)
 			s_array = fill_array_int(*stack_a);
 			ft_sort_array(s_array, ft_lstsize_int(*stack_a));
 			push_hundred(stack_a, stack_b, len, s_array);
-			//push_stack_a(stack_a, stack_b);
+			push_stack_a(stack_a, stack_b);
 			free(s_array);
 		}
 	}
