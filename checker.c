@@ -6,7 +6,7 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 18:11:37 by klever            #+#    #+#             */
-/*   Updated: 2021/09/24 18:46:23 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/24 21:53:53 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,9 @@ static void	set_arg(t_list_n **stack_a, t_list_n **stack_b)
 		free (line);
 	}
 	if (check_a(*stack_a, ft_lstsize_int(*stack_a)) && !*stack_b)
-		ft_putstr("\nOK");
+		ft_putstr("OK\n");
 	else
-		ft_putstr("\nKO");
+		ft_putstr("KO\n");
 	while (comand[j])
 		free(comand[j++]);
 	free(comand);
