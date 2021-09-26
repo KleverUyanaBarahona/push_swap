@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:05:52 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/24 18:50:51 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/26 20:21:00 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include    "./libft/libft.h"
-# include    "./gnl/get_next_line_bonus.h"
-# include    <stdio.h>
-# include    <stdlib.h>
+# include "./libft/libft.h"
+# include "./gnl/get_next_line_bonus.h"
+# include <stdio.h>
+# include <stdlib.h>
 
 typedef struct s_var_split
 {
